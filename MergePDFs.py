@@ -27,12 +27,14 @@ if __name__ == "__main__":
     merger = PdfMerger()  # Initialize a PdfMerger object
     getFiles()  # Get the list of PDF files to merge from user input
     newPDF = input("Give a name to merged PDF: ")  # Prompt user to give a name to the merged PDF file
-    while True:
+    flag = True
+    while flag:
         try:
             directory = getDir(
                 "Copy and paste the directory where you want to store merged PDF (Do not include ' \" '): ")  # Get the directory path from user input
             newPDF = os.path.join(directory, newPDF)
             merger.write(newPDF)
             merger.close()
+            flag = False
         except Exception:
             print("directory not found")
