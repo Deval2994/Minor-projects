@@ -1,4 +1,4 @@
-""""
+"""
 Author: Deval Patel
 Description: This project showcases the integration of an API key in Python to fetch real-time currency exchange rates,
 demonstrating proficiency in handling external APIs and parsing JSON responses.
