@@ -1,3 +1,9 @@
+"""
+Author: Deval Patel
+Description: This project effectively utilizes Python's `os` module to manage file and
+directory operations, demonstrating a strong grasp of OS interactions for tasks like merging PDF files into a single
+document.
+"""
 from PyPDF2 import PdfMerger
 import os
 
