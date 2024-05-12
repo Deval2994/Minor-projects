@@ -10,6 +10,7 @@ from selenium.webdriver.common.by import By
 
 
 def login(username, password):
+    time.sleep(3)
     driver.find_element(By.NAME, 'username').send_keys(username)
     driver.find_element(By.NAME, 'password').send_keys(password)
     driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]').click()
@@ -32,7 +33,7 @@ def messageReceiverIdentity(messageSender, message):
     driver.find_element(By.XPATH, '/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div/div/div[1]/div/div[4]').click()
     time.sleep(1)  # Wait for the text input field to become active
     driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div[1]/div[1]/div[2]/section/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div[1]').send_keys(f'Hi, I am {messageSender}\nI had ran your code')
-    time.sleep(1)  # Wait for the message to be typed
+    time.sleep(2)  # Wait for the message to be typed
     driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div[1]/div[1]/div[2]/section/div/div/div/div[1]/div/div[2]/div/div/div/div/div/div/div[2]/div/div/div[2]/div/div/div[3]').click()
 
     if message != "":
