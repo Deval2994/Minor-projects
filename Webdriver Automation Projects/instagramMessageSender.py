@@ -14,7 +14,7 @@ def login(username, password):
     driver.find_element(By.NAME, 'username').send_keys(username)
     driver.find_element(By.NAME, 'password').send_keys(password)
     driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div[1]/section/main/article/div[2]/div[1]/div[2]/form/div/div[3]').click()
-    time.sleep(5)  # Wait for the page to load after logging in
+    time.sleep(10)  # Wait for the page to load after logging in
     driver.find_element(By.XPATH, '/html/body/div[2]/div/div/div[2]/div/div/div[1]/div[1]/div[2]/section/main/div/div/div/div/div').click()
     time.sleep(1)  # Wait for the direct messages section to load
 
